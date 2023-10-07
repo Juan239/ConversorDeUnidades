@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_principal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/verdePrincipal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:text="Conversor de unidades"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/tabLayout"
+            app:tabTextColor="@color/white"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/black"
+            android:background="#00FFFFFF"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_pager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
