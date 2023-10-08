@@ -15,7 +15,9 @@
         <activity
             android:name=".activity_principal"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            />
         <activity
             android:name=".splashscreen_activity"
             android:exported="true"

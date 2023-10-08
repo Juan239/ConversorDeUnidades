@@ -27,7 +27,7 @@
             android:id="@+id/tabLayout"
             app:tabTextColor="@color/white"
             app:tabIndicatorAnimationMode="elastic"
-            app:tabIndicatorColor="@color/black"
+            app:tabIndicatorColor="@color/verdeSecundario"
             android:background="#00FFFFFF"/>
     </com.google.android.material.appbar.AppBarLayout>
 
