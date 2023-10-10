@@ -152,7 +152,7 @@ public class longitudFragment extends Fragment {
 
     //Operaciones con metros
     public Float metro_a_milimetro(float x) {
-        float resultado = x / 100000;
+        float resultado = x * 1000;
         return resultado;
     }
 
@@ -162,7 +162,7 @@ public class longitudFragment extends Fragment {
     }
 
     public Float metro_a_kilometro(float x) {
-        float resultado = x * 1000;
+        float resultado = x / 1000;
         return resultado;
     }
     //Operaciones con kilometros
