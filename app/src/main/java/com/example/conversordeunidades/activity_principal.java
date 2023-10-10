@@ -21,7 +21,7 @@ public class activity_principal extends AppCompatActivity {
     private TabLayout tabLayout;
     private electricidadFragment fragmentoElectridad;
     private longitudFragment fragmentoLongitud;
-    private quimicaFragment fragmentoQuimica;
+    private fisicaFragment fragmentoFisica;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,14 +32,14 @@ public class activity_principal extends AppCompatActivity {
 
         fragmentoElectridad = new electricidadFragment();
         fragmentoLongitud = new longitudFragment();
-        fragmentoQuimica = new quimicaFragment();
+        fragmentoFisica = new fisicaFragment();
 
         tabLayout.setupWithViewPager(viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),0);
 
         viewPagerAdapter.addFragments(fragmentoElectridad, "Electricidad");
         viewPagerAdapter.addFragments(fragmentoLongitud, "Longitud");
-        viewPagerAdapter.addFragments(fragmentoQuimica, "Química");
+        viewPagerAdapter.addFragments(fragmentoFisica, "Física");
         viewPager.setAdapter(viewPagerAdapter);
     }
 
