@@ -1,17 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffe5"
+    android:background="@color/blancoFondo"
     tools:context=".electricidadFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Electricidad"
-        android:gravity="center"
-        android:textSize="40dp"/>
+        android:orientation="vertical">
 
-</FrameLayout>
+        <Spinner
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="30dp"
+            android:id="@+id/spinnerElectricidad"
+            android:layout_gravity="center"
+            android:background="@drawable/style_spinner"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:id="@+id/EvalorEntrada1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/fondo_edit_text"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:id="@+id/EvalorEntrada2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/fondo_edit_text"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:id="@+id/EvalorEntrada3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/fondo_edit_text"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Calcular"
+            android:id="@+id/resultadoElectricidad"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/fondo_resultado"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

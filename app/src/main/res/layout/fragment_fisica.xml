@@ -42,17 +42,6 @@
             android:background="@drawable/fondo_edit_text"
             android:layout_margin="20dp"/>
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="62dp"
-            android:layout_weight="1"
-            android:inputType="numberDecimal"
-            android:id="@+id/valorEntrada3"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:background="@drawable/fondo_edit_text"
-            android:layout_margin="20dp"/>
-
         <TextView
             android:layout_width="250dp"
             android:layout_height="62dp"

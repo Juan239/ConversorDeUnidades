@@ -24,7 +24,7 @@ import java.util.Arrays;
 public class fisicaFragment extends Fragment {
     Spinner spinner;
     String opcionSpinner;
-    EditText entrada1, entrada2, entrada3;
+    EditText entrada1, entrada2;
     TextView resultado;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,7 +35,6 @@ public class fisicaFragment extends Fragment {
         spinner = rootView.findViewById(R.id.spinnerFisica);
         entrada1 = rootView.findViewById(R.id.valorEntrada1);
         entrada2 = rootView.findViewById(R.id.valorEntrada2);
-        entrada3 = rootView.findViewById(R.id.valorEntrada3);
         resultado = rootView.findViewById(R.id.resultadoFisica);
 
         String[] valoresLongitud = {"Aceleración lineal","Velocidad lineal","Frecuencia","Fuerza","Presión","Densidad"};
@@ -51,32 +50,26 @@ public class fisicaFragment extends Fragment {
                     reestablecer();
                     entrada1.setHint("Ingrese la variación de velocidad");
                     entrada2.setHint("Ingrese la variación de tiempo");
-                    entrada3.setVisibility(View.GONE);
                 } else if (opcionSpinner.equals("Velocidad lineal")) {
                     reestablecer();
                     entrada1.setHint("Ingrese el cambio en la posición");
                     entrada2.setHint("Ingrese la variación de tiempo");
-                    entrada3.setVisibility(View.GONE);
                 } else if (opcionSpinner.equals("Frecuencia")) {
                     reestablecer();
                     entrada1.setHint("Ingrese el periodo");
                     entrada2.setVisibility(View.GONE);
-                    entrada3.setVisibility(View.GONE);
                 } else if (opcionSpinner.equals("Fuerza")) {
                     reestablecer();
                     entrada1.setHint("Ingrese la masa");
                     entrada2.setHint("Ingrese la aceleración");
-                    entrada3.setVisibility(View.GONE);
                 } else if (opcionSpinner.equals("Presión")) {
                     reestablecer();
                     entrada1.setHint("Ingrese la fuerza");
                     entrada2.setHint("Ingrese el área");
-                    entrada3.setVisibility(View.GONE);
                 } else if (opcionSpinner.equals("Densidad")) {
                     reestablecer();
                     entrada1.setHint("Ingrese la masa");
                     entrada2.setHint("Ingrese el volumen");
-                    entrada3.setVisibility(View.GONE);
                 }
             }
 
@@ -177,10 +170,8 @@ public class fisicaFragment extends Fragment {
     public void reestablecer(){
         entrada1.setVisibility(View.VISIBLE);
         entrada2.setVisibility(View.VISIBLE);
-        entrada3.setVisibility(View.VISIBLE);
         entrada1.setText("");
         entrada2.setText("");
-        entrada3.setText("");
         resultado.setText("Calcular");
     }
     static String escribe(double d) {
