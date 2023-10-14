@@ -93,8 +93,7 @@ public class electricidadFragment extends Fragment {
                     entrada2.setHint("Número de bobinas:");
                     entrada3.setHint("Intensidad de la corriente:");
                 }
-            }
-            @Override
+            }            @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
