@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_contacto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/blancoFondo">
+
+    <TextView
+        android:layout_width="350dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/textoContacto"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- EditText -->
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/correoS"
+        android:hint="Ingresa tu correo:"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Button -->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:id="@+id/btnCorreo"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        app:cornerRadius="10dp"
+        android:backgroundTint="@color/verdePrincipal"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/miCorreo"
+        android:textSize="18sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="center"
+        android:id="@+id/correoP"
+        android:text="j.rodriguez118@alumnos.santotomas.cl"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:background="@drawable/fondo_resultado"/>
+
+
+
+</LinearLayout>

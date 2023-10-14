@@ -9,8 +9,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -22,6 +27,7 @@ public class activity_principal extends AppCompatActivity {
     private electricidadFragment fragmentoElectridad;
     private longitudFragment fragmentoLongitud;
     private fisicaFragment fragmentoFisica;
+    private FloatingActionButton btnContacto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +35,15 @@ public class activity_principal extends AppCompatActivity {
 
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tabLayout);
+        btnContacto = findViewById(R.id.botonFlotante);
+
+        btnContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity_principal.this, activity_contacto.class);
+                startActivity(intent);
+            }
+        });
 
         fragmentoElectridad = new electricidadFragment();
         fragmentoLongitud = new longitudFragment();
@@ -41,6 +56,13 @@ public class activity_principal extends AppCompatActivity {
         viewPagerAdapter.addFragments(fragmentoLongitud, "Longitud");
         viewPagerAdapter.addFragments(fragmentoFisica, "Física");
         viewPager.setAdapter(viewPagerAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_desplegable, menu);
+        return true;
     }
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {

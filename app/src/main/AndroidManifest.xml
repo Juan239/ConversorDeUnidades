@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,11 +14,13 @@
         android:theme="@style/Theme.ConversorDeUnidades"
         tools:targetApi="31">
         <activity
+            android:name=".activity_contacto"
+            android:exported="false" />
+        <activity
             android:name=".activity_principal"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".splashscreen_activity"
             android:exported="true"

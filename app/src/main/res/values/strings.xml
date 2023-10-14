@@ -2,4 +2,6 @@
     <string name="app_name">ConversorDeUnidades</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="miCorreo">Si hay algún error en las fórmulas utilizadas por la aplicación o tienes alguna idea para mejorar la misma por favor contactate a este correo:</string>
+    <string name="textoContacto">Ingresa tu correo eléctronico aquí para estar al tanto de las actualizaciones y para estar atento a el lanzamiento de la aplicación en la PlayStore</string>
 </resources>

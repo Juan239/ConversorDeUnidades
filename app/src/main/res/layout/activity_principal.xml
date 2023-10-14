@@ -21,7 +21,6 @@
             android:gravity="center"
             android:textSize="25dp"/>
 
-
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -37,5 +36,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/view_pager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonFlotante"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:backgroundTint="@color/verdePrincipal"
+        app:tint="#FFF"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
